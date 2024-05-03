@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/auth-header-style.css}">
+    <link rel="stylesheet" th:href="@{css/auth-footer-style.css}">
+    <link rel="stylesheet" th:href="@{css/sign-style.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css}">
+
+</head>
+<body>
+<div th:insert="layout/auth-header :: signup"></div>
+
+<main class="sign-main-container">
+    <div class="sign-main-background d-flex align-items-center">
+        <div class="sign-up-form-container d-flex justify-content-center align-items-center">
+            <form action="/login" method="post">
+                <p>
+                    Log In
+                </p>
+                <input class="username-input" name="username" placeholder="Username" type="text">
+                <input class="password-input" name="password" placeholder="Password" type="password">
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<div th:insert="layout/auth-footer :: footer"></div>
+</body>
+</html>
